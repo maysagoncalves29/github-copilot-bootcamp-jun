@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Search Results - People Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🔍 People Directory</h1>
+            <p class="subtitle">API Search Results</p>
+        </header>
+        
+        <div class="status-bar">
+            <div class="status-info">
+                <span class="status-dot"></span>
+                <span>Live Data</span>
+            </div>
+            <div class="last-update">
+                Last updated: <span id="lastUpdate">Loading...</span>
+            </div>
+        </div>
+
+        <div class="search-results">
+            <div class="results-header">
+                <h2>Search Results</h2>
+                <div class="results-count">
+                    <span id="resultsCount">0</span> people found
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="loading-indicator" id="loadingIndicator">
+            <div class="spinner"></div>
+            <p>Updating data...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
