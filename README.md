@@ -1,1 +1,1 @@
-# github-copilot-bootcamp-jun
+# GitHub Copilot BootCamp - Edição Recife
