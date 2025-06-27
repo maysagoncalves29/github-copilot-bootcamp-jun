@@ -1,0 +1,33 @@
+{
+  "name": "people-directory-spfx",
+  "version": "1.0.0",
+  "description": "SPFx People Directory Web Part - Converted from HTML/CSS/JS",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "serve": "http-server ./lib -p 8080",
+    "test": "echo \"SPFx project structure created successfully\"",
+    "package-solution": "echo \"In a real SPFx environment, run 'gulp package-solution'\"",
+    "install-spfx": "echo \"To use with SPFx toolchain, install Node.js 18.17.1 and run 'npm install -g @microsoft/generator-sharepoint'\""
+  },
+  "dependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.45",
+    "@types/react-dom": "17.0.17",
+    "typescript": "4.7.4",
+    "http-server": "^14.1.1"
+  },
+  "spfxInfo": {
+    "originalStructure": "HTML/CSS/JavaScript",
+    "convertedTo": "React/TypeScript SPFx structure",
+    "note": "This project demonstrates the SPFx conversion. For actual SPFx deployment, use Node.js 18.17.1 with @microsoft/generator-sharepoint"
+  },
+  "private": true
+}

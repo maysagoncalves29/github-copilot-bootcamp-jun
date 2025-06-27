@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Directory - SPFx React Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+        }
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .demo-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .demo-header h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .demo-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .conversion-info {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #0078d4;
+        }
+        .conversion-info h3 {
+            margin-top: 0;
+            color: #0078d4;
+        }
+        .original-vs-new {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .comparison-box {
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        .original {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+        .new {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+        .comparison-box h4 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        .tech-list li {
+            padding: 3px 0;
+            font-size: 0.9rem;
+        }
+        .tech-list li:before {
+            content: "• ";
+            color: #0078d4;
+            font-weight: bold;
+        }
+        #react-app {
+            margin-top: 30px;
+        }
+        .spfx-note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .spfx-note strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-header">
+            <h1>🚀 People Directory - SPFx Conversion Demo</h1>
+            <p>Original HTML/CSS/JavaScript converted to React/TypeScript SPFx structure</p>
+        </div>
+
+        <div class="conversion-info">
+            <h3>📋 Conversion Summary</h3>
+            <div class="original-vs-new">
+                <div class="comparison-box original">
+                    <h4>📄 Original Structure</h4>
+                    <ul class="tech-list">
+                        <li>HTML (index.html)</li>
+                        <li>CSS (style.css)</li>
+                        <li>JavaScript (script.js)</li>
+                        <li>PeopleAPI class</li>
+                        <li>DOM manipulation</li>
+                        <li>Static files</li>
+                    </ul>
+                </div>
+                <div class="comparison-box new">
+                    <h4>⚛️ SPFx React Structure</h4>
+                    <ul class="tech-list">
+                        <li>React Components (.tsx)</li>
+                        <li>TypeScript interfaces</li>
+                        <li>CSS Modules / SCSS</li>
+                        <li>Service layer</li>
+                        <li>SPFx Web Part</li>
+                        <li>SharePoint integration ready</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p><strong>✅ Mantidas as funcionalidades:</strong> Lista fake de pessoas, atualização automática a cada 10 segundos, refresh manual ao clicar no título, mesma aparência visual com tema baby pink/blue.</p>
+            
+            <p><strong>🔧 Estrutura SPFx:</strong> O projeto agora segue a estrutura padrão do SharePoint Framework com manifestos, configurações e componentes React prontos para SharePoint.</p>
+        </div>
+
+        <div class="spfx-note">
+            <strong>📌 Nota sobre SharePoint Framework:</strong><br>
+            Este demo funciona como uma aplicação React standalone para demonstração. Para usar em produção no SharePoint, seria necessário Node.js 18.17.1 e as ferramentas SPFx completas. A estrutura de arquivos e componentes já está preparada para isso.
+        </div>
+
+        <div id="react-app">
+            <!-- React component will be rendered here -->
+            <div style="text-align: center; padding: 40px; background: #f8f9fa; border-radius: 8px;">
+                <p>🔄 Loading React Component...</p>
+                <p style="font-size: 0.9rem; color: #666;">
+                    Para ver o componente funcionando, seria necessário compilar o TypeScript e configurar um bundler como Webpack.
+                    A estrutura SPFx completa está criada em: <code>src/webparts/peopleDirectory/</code>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
