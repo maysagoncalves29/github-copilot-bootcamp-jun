@@ -1,0 +1,41 @@
+{
+  "schema": "https://schema.management.azure.com/providers/Microsoft.PowerApps/schemas/2016-11-01/powerapps.json",
+  "name": "PeopleDirectory",
+  "displayName": "People Directory",
+  "description": "A PowerApps canvas application for managing and displaying people directory with real-time data updates",
+  "version": "1.0.0.0",
+  "author": "GitHub Copilot Bootcamp",
+  "publisher": "PowerApps Community",
+  "applicationDefinition": {
+    "appVersion": "1.0.0.0",
+    "minimumApiVersion": "2.2.0",
+    "documentLayoutHeight": 1136,
+    "documentLayoutWidth": 640,
+    "documentLayoutOrientation": "portrait",
+    "documentType": "app",
+    "fileID": "a1b2c3d4-e5f6-7890-abcd-123456789012",
+    "locale": "pt-BR",
+    "properties": {
+      "description": "Aplicação PowerApps para gerenciar e exibir diretório de pessoas com atualizações de dados em tempo real",
+      "displayName": "Diretório de Pessoas",
+      "enableAutoSave": true,
+      "enableInstrumentation": true
+    }
+  },
+  "screens": [
+    {
+      "name": "MainScreen",
+      "displayName": "Tela Principal", 
+      "description": "Tela principal do diretório de pessoas"
+    }
+  ],
+  "dataSources": [
+    {
+      "name": "PeopleCollection",
+      "type": "Collection",
+      "description": "Coleção local de dados de pessoas"
+    }
+  ],
+  "connections": [],
+  "resources": []
+}
