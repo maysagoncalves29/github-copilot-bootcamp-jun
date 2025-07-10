@@ -1,0 +1,208 @@
+{
+  "controls": {
+    "HeaderContainer": {
+      "type": "groupContainer",
+      "properties": {
+        "Fill": "RGBA(255, 255, 255, 1)",
+        "BorderRadius": 20,
+        "DropShadow": "DropShadow.Regular",
+        "description": "Container principal do cabeçalho com título e subtítulo"
+      }
+    },
+    "TitleLabel": {
+      "type": "label", 
+      "properties": {
+        "Text": "🔍 Diretório de Pessoas",
+        "Size": 24,
+        "FontWeight": "FontWeight.Bold",
+        "Color": "RGBA(255, 145, 164, 1)",
+        "Align": "Align.Center",
+        "description": "Título principal da aplicação"
+      }
+    },
+    "SubtitleLabel": {
+      "type": "label",
+      "properties": {
+        "Text": "Resultados da Pesquisa API", 
+        "Size": 16,
+        "Color": "RGBA(108, 117, 125, 1)",
+        "Align": "Align.Center",
+        "description": "Subtítulo explicativo"
+      }
+    },
+    "StatusContainer": {
+      "type": "groupContainer",
+      "properties": {
+        "Fill": "RGBA(255, 255, 255, 1)",
+        "BorderRadius": 15,
+        "DropShadow": "DropShadow.Light",
+        "description": "Container de status com indicador de dados ativos"
+      }
+    },
+    "StatusIndicator": {
+      "type": "circle",
+      "properties": {
+        "Fill": "RGBA(135, 206, 235, 1)",
+        "BorderThickness": 0,
+        "Width": 12,
+        "Height": 12,
+        "description": "Indicador visual de status ativo"
+      }
+    },
+    "StatusLabel": {
+      "type": "label",
+      "properties": {
+        "Text": "Dados Ativos",
+        "Size": 14,
+        "FontWeight": "FontWeight.Semibold", 
+        "Color": "RGBA(73, 80, 87, 1)",
+        "description": "Label de status dos dados"
+      }
+    },
+    "LastUpdateLabel": {
+      "type": "label",
+      "properties": {
+        "Text": "Última atualização: {LastUpdateTime}",
+        "Size": 12,
+        "Color": "RGBA(108, 117, 125, 1)",
+        "Align": "Align.Right",
+        "description": "Timestamp da última atualização dos dados"
+      }
+    },
+    "ResultsContainer": {
+      "type": "groupContainer",
+      "properties": {
+        "Fill": "RGBA(255, 255, 255, 1)",
+        "BorderRadius": 20,
+        "DropShadow": "DropShadow.Regular",
+        "description": "Container principal dos resultados"
+      }
+    },
+    "ResultsHeader": {
+      "type": "groupContainer", 
+      "properties": {
+        "Fill": "Linear gradient from #FFB6C1 to #87CEEB",
+        "BorderRadius": 20,
+        "Height": 70,
+        "description": "Cabeçalho da seção de resultados com gradiente"
+      }
+    },
+    "ResultsTitle": {
+      "type": "label",
+      "properties": {
+        "Text": "Resultados da Pesquisa",
+        "Size": 18,
+        "FontWeight": "FontWeight.Semibold",
+        "Color": "RGBA(255, 255, 255, 1)",
+        "description": "Título da seção de resultados"
+      }
+    },
+    "ResultsCount": {
+      "type": "label",
+      "properties": {
+        "Text": "{CountRows(PeopleCollection)} pessoas encontradas",
+        "Size": 14,
+        "FontWeight": "FontWeight.Medium",
+        "Color": "RGBA(255, 255, 255, 1)",
+        "Align": "Align.Right",
+        "description": "Contador dinâmico de pessoas encontradas"
+      }
+    },
+    "PeopleGallery": {
+      "type": "gallery",
+      "properties": {
+        "Items": "PeopleCollection",
+        "BorderThickness": 0,
+        "ShowScrollbar": true,
+        "TemplatePadding": 5,
+        "TemplateSize": 60,
+        "description": "Galeria principal para exibir a lista de pessoas"
+      },
+      "template": {
+        "NameLabel": {
+          "type": "label",
+          "properties": {
+            "Text": "ThisItem.Name",
+            "Size": 14,
+            "FontWeight": "FontWeight.Semibold",
+            "Color": "RGBA(73, 80, 87, 1)",
+            "description": "Nome da pessoa"
+          }
+        },
+        "EmailLabel": {
+          "type": "label", 
+          "properties": {
+            "Text": "ThisItem.Email",
+            "Size": 12,
+            "Color": "RGBA(107, 182, 255, 1)",
+            "description": "Email da pessoa"
+          }
+        },
+        "PhoneLabel": {
+          "type": "label",
+          "properties": {
+            "Text": "ThisItem.Phone",
+            "Size": 12,
+            "Color": "RGBA(255, 145, 164, 1)", 
+            "description": "Telefone da pessoa"
+          }
+        }
+      }
+    },
+    "RefreshButton": {
+      "type": "button",
+      "properties": {
+        "Text": "🔄 Atualizar Dados",
+        "Fill": "RGBA(135, 206, 235, 1)",
+        "Color": "RGBA(255, 255, 255, 1)",
+        "BorderThickness": 0,
+        "BorderRadius": 25,
+        "FontWeight": "FontWeight.Semibold",
+        "Width": 200,
+        "Height": 50,
+        "OnSelect": "// Refresh data with random generation",
+        "description": "Botão para atualização manual dos dados"
+      }
+    },
+    "AutoRefreshTimer": {
+      "type": "timer",
+      "properties": {
+        "Duration": 10000,
+        "Repeat": true,
+        "AutoStart": true,
+        "OnTimerEnd": "RefreshButton.OnSelect; Reset(AutoRefreshTimer)",
+        "description": "Timer para atualização automática a cada 10 segundos"
+      }
+    },
+    "LoadingSpinner": {
+      "type": "loadingSpinner",
+      "properties": {
+        "Width": 100,
+        "Height": 100,
+        "Visible": false,
+        "Color": "RGBA(255, 182, 193, 1)",
+        "description": "Indicador de carregamento"
+      }
+    }
+  },
+  "variables": {
+    "AutoRefreshTimer": {
+      "type": "Boolean",
+      "defaultValue": true,
+      "description": "Controla se o timer de atualização automática está ativo"
+    },
+    "LastUpdateTime": {
+      "type": "DateTime",
+      "defaultValue": "Now()",
+      "description": "Timestamp da última atualização dos dados"
+    }
+  },
+  "theme": {
+    "primaryColor": "#FFB6C1",
+    "secondaryColor": "#87CEEB", 
+    "accentColor": "#FF91A4",
+    "backgroundColor": "#FFFFFF",
+    "textColor": "#495057",
+    "lightTextColor": "#6C757D"
+  }
+}

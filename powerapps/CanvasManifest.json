@@ -1,0 +1,44 @@
+{
+  "FormatVersion": "0.20",
+  "Properties": {
+    "Author": "GitHub Copilot Bootcamp",
+    "Name": "DiretorioPessoas",
+    "Description": "Aplicação PowerApps para gerenciar diretório de pessoas com atualizações em tempo real",
+    "AppCreationSource": "AppFromScratch",
+    "AppDescription": "Transformação da aplicação web JavaScript para PowerApps, mantendo funcionalidade de exibição e atualização de dados de pessoas",
+    "AppName": "Diretório de Pessoas",
+    "BackgroundImageUri": "",
+    "DocumentLayoutHeight": 1136,
+    "DocumentLayoutLockOrientation": true,
+    "DocumentLayoutMaintainAspectRatio": true,
+    "DocumentLayoutOrientation": "portrait",
+    "DocumentLayoutScaleToFit": true,
+    "DocumentLayoutWidth": 640,
+    "EnableInstrumentation": true,
+    "InstrumentationKey": "",
+    "LocalDatabaseReferences": {},
+    "ManualOfflineProfileId": "",
+    "OriginatingVersion": "3.21103.17.0",
+    "Publisher": "PowerApps Community",
+    "PublisherEmail": "",
+    "Version": "1.0.0.0"
+  },
+  "Header": {
+    "DocVersion": "1.325",
+    "MinVersionToLoad": "3.21103.17.0"
+  },
+  "PublishInfo": {
+    "AppName": "Diretório de Pessoas",
+    "BackgroundColor": "RGBA(255,182,193,1)",
+    "IconColor": "RGBA(135,206,235,1)",
+    "IconName": "ic_fluent_people_24_regular",
+    "LogoFileName": "",
+    "PublishDataLocally": false,
+    "PublishResourcesLocally": false,
+    "PublishTarget": "player",
+    "UserLocale": "pt-BR"
+  },
+  "ScreenOrder": [
+    "MainScreen"
+  ]
+}

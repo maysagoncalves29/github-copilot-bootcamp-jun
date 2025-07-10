@@ -1,0 +1,90 @@
+{
+  "name": "PeopleCollection",
+  "type": "Collection",
+  "schema": {
+    "fields": [
+      {
+        "name": "ID",
+        "type": "Number",
+        "displayName": "ID",
+        "description": "Identificador único da pessoa"
+      },
+      {
+        "name": "Name", 
+        "type": "Text",
+        "displayName": "Nome",
+        "description": "Nome completo da pessoa",
+        "maxLength": 100
+      },
+      {
+        "name": "Email",
+        "type": "Text", 
+        "displayName": "Email",
+        "description": "Endereço de email da pessoa",
+        "maxLength": 150
+      },
+      {
+        "name": "Phone",
+        "type": "Text",
+        "displayName": "Telefone", 
+        "description": "Número de telefone da pessoa",
+        "maxLength": 20
+      }
+    ]
+  },
+  "initialData": [
+    {
+      "ID": 1,
+      "Name": "Ana Silva",
+      "Email": "ana.silva234@outlook.com",
+      "Phone": "(11) 98765-4321"
+    },
+    {
+      "ID": 2,
+      "Name": "Carlos Santos", 
+      "Email": "carlos.santos@gmail.com",
+      "Phone": "(21) 91234-5678"
+    },
+    {
+      "ID": 3,
+      "Name": "Maria Oliveira",
+      "Email": "maria.oliveira@hotmail.com", 
+      "Phone": "(31) 99876-5432"
+    },
+    {
+      "ID": 4,
+      "Name": "João Souza",
+      "Email": "joao.souza@yahoo.com.br",
+      "Phone": "(41) 94567-8901"
+    },
+    {
+      "ID": 5,
+      "Name": "Lucia Rodrigues",
+      "Email": "lucia.rodrigues@empresa.com.br",
+      "Phone": "(51) 93456-7890"
+    },
+    {
+      "ID": 6,
+      "Name": "Pedro Ferreira",
+      "Email": "pedro.ferreira@outlook.com",
+      "Phone": "(61) 92345-6789"
+    },
+    {
+      "ID": 7, 
+      "Name": "Fernanda Alves",
+      "Email": "fernanda.alves@gmail.com",
+      "Phone": "(71) 91234-5678"
+    },
+    {
+      "ID": 8,
+      "Name": "Roberto Lima",
+      "Email": "roberto.lima@hotmail.com",
+      "Phone": "(81) 98765-4321"
+    }
+  ],
+  "powerFxFormulas": {
+    "generateRandomName": "With({_firstNames: [\"Ana\", \"Carlos\", \"Maria\", \"João\", \"Lucia\", \"Pedro\", \"Fernanda\", \"Roberto\", \"Camila\", \"Rafael\"], _lastNames: [\"Silva\", \"Santos\", \"Oliveira\", \"Souza\", \"Rodrigues\", \"Ferreira\", \"Alves\", \"Pereira\", \"Lima\", \"Gomes\"]}, Index(_firstNames, RandBetween(1, CountRows(_firstNames))).Value & \" \" & Index(_lastNames, RandBetween(1, CountRows(_lastNames))).Value)",
+    "generateRandomEmail": "With({_domains: [\"gmail.com\", \"hotmail.com\", \"yahoo.com.br\", \"outlook.com\", \"empresa.com.br\"]}, Lower(Substitute(Substitute([Name], \" \", \".\"), \"ã\", \"a\")) & RandBetween(100, 999) & \"@\" & Index(_domains, RandBetween(1, CountRows(_domains))).Value)",
+    "generateRandomPhone": "With({_areaCodes: [\"11\", \"21\", \"31\", \"41\", \"51\", \"61\", \"71\", \"81\", \"85\", \"87\"]}, \"(\" & Index(_areaCodes, RandBetween(1, CountRows(_areaCodes))).Value & \") \" & RandBetween(10000, 99999) & \"-\" & RandBetween(1000, 9999))"
+  }
+}
